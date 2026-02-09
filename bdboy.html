@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy birthday my handsome babyy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #1e3c72, #2a5298, #5fa8d3);
+  text-align: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.container {
+  padding: 20px;
+  max-width: 480px;
+  margin: auto;
+}
+
+h1 { font-size: 26px; margin-bottom: 10px; }
+h2 { font-size: 20px; }
+p { font-size: 15px; }
+
+button {
+  width: 100%;
+  padding: 16px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #0a2540;
+  background: linear-gradient(135deg, #bcdff1, #e6f4ff);
+  box-shadow: 0 0 16px rgba(188,223,241,0.8);
+  transition: 0.2s;
+}
+
+button:active { transform: scale(0.97); }
+.hidden { display: none; }
+
+.card {
+  background: rgba(255,255,255,0.15);
+  border-radius: 24px;
+  padding: 20px;
+  margin-top: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.letter {
+  background: #ffffff;
+  color: #1e3c72;
+  padding: 22px;
+  border-radius: 24px;
+  font-size: 16px;
+  line-height: 1.6;
+  box-shadow: 0 0 22px rgba(95,168,211,0.8);
+}
+
+img {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 20px;
+  margin-top: 15px;
+}
+
+/* Envelope */
+.envelope {
+  width: 220px;
+  height: 140px;
+  background: #e6f4ff;
+  margin: 40px auto;
+  position: relative;
+  border-radius: 0 0 15px 15px;
+  cursor: pointer;
+}
+
+.envelope:before {
+  content: "";
+  position: absolute;
+  top: -70px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 110px solid transparent;
+  border-right: 110px solid transparent;
+  border-bottom: 70px solid #cfe6ff;
+  transform-origin: bottom;
+  transition: transform 0.6s;
+}
+
+.envelope.open:before { transform: rotateX(180deg); }
+.envelope-text { position: absolute; width: 100%; top: 50px; font-weight: bold; color: #0a2540; }
+
+/* Confetti */
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #bcdff1;
+  animation: fall 3s linear infinite;
+}
+@keyframes fall {
+  from { transform: translateY(-10px) rotate(0deg); }
+  to { transform: translateY(110vh) rotate(720deg); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>HAPPY BIRTHDAY MY HANDSOME BABYYYYY</h1>
+  <p>YOUR PRETTY BABY, SAMMYYY.</p>
+
+  <button onclick="startLove()">Click Start If You Love Me</button>
+
+  <!-- ENVELOPE -->
+  <div id="envelopeSection" class="hidden">
+    <div class="envelope" id="env" onclick="openEnvelope()">
+      <div class="envelope-text">OPEN</div>
+    </div>
+  </div>
+
+  <!-- STAGE 1 -->
+  <div id="stage1" class="hidden card">
+    <h2>Be honest.</h2>
+    <p>DO YOU REALLY WANNA MARRY ME? KAPAG HINDI, IIYAK AKO HMP, HIRAP NITO IH.</p>
+    <button onclick="stageTwo()">Yes</button>
+    <button onclick="tease()">yes na yes, ikaw lang gusto ko baby ko, wala akong babae, di ako magloloko, loyal sayo habang nabubuhay ako.</button>
+
+  </div>
+
+  <!-- STAGE 2 -->
+  <div id="stage2" class="hidden card">
+    <h2>You can click everything.</h2>
+    <button onclick="toggle('sweet')">Sweet</button>
+    <button onclick="toggle('funny')">Funny</button>
+    <button onclick="toggle('kilig')">Kilig</button>
+    <button onclick="toggle('letter')">Letter</button>
+  </div>
+
+  <!-- CLICKABLE MESSAGES -->
+  <div id="sweet" class="hidden card">
+    <p>love na love na love na love kita, ikaw lang, sarap mo kasi hehe, the best among the rest ang atake.</p>
+  </div>
+
+  <div id="funny" class="hidden card">
+    <p>Certified: Most handsome boyfriend in the world hihi.</p>
+  </div>
+
+  <div id="kilig" class="hidden card">
+    <p>i will forever choose you in every lifetime, baby. iloveyouuuuuuuuuuusooooooooooomuchhhhhhhhhhhhh */kissed your lips passionately.</p>
+  </div>
+
+  <div id="letter" class="hidden letter">
+    <h2>For You</h2>
+    <p>
+      Happy 22nd Birthday, my love.<br><br>
+      Thank you po for existing and for being exactly who you are,i also want to thank you for staying even when our situation rn is hard for the both of us.
+      Loving you is the easiest and the best thing I’ve ever done, my baby.<br><br>
+      <strong>I love you so so much, handsome. Meet up na para masaya, 22 ka na ih, pwede na, yumyum.</strong><br><br>
+      YOUR BABY
+    </p>
+  </div>
+
+<div class="card">
+  <h2>THE MOST HANDSOME BF IN THE WORLD</h2>
+  <img src="https://media.tenor.com/Kx0Fvj5lM5gAAAAC/blue-tulips.gif" alt="Blue Tulips Bouquet">
+</div>
+
+    <div class="card">
+      <h2>PATINGIN NA BABY PLEASEEEEE</h2>
+      <img src="https://media.tenor.com/2roX3uxz_68AAAAC/please-beg.gif" alt="Please">
+    </div>
+  </div>
+</div>
+
+<!-- BACKGROUND MUSIC -->
+<div id="ytMusic" class="hidden">
+  <iframe
+    width="1"
+    height="1"
+    src="https://www.youtube.com/embed/vYMxOzxKYYo?autoplay=1&loop=1&playlist=vYMxOzxKYYo"
+    frameborder="0"
+    allow="autoplay"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<script>
+function startLove() {
+  document.getElementById("envelopeSection").classList.remove("hidden");
+  document.getElementById("ytMusic").classList.remove("hidden");
+  confetti();
+}
+
+function openEnvelope() {
+  document.getElementById("env").classList.add("open");
+  setTimeout(() => {
+    document.getElementById("stage1").classList.remove("hidden");
+  }, 600);
+}
+
+function stageTwo() {
+  document.getElementById("stage2").classList.remove("hidden");
+  document.getElementById("extras").classList.remove("hidden");
+}
+
+function tease() {
+  alert("Try again.");
+}
+
+function toggle(id) {
+  document.getElementById(id).classList.toggle("hidden");
+}
+
+function confetti() {
+  for (let i = 0; i < 30; i++) {
+    let c = document.createElement("div");
+    c.className = "confetti";
+    c.style.left = Math.random() * 100 + "vw";
+    c.style.animationDuration = (Math.random() * 2 + 2) + "s";
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 4000);
+  }
+}
+</script>
+
+</body>
+</html>
